@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Site | My Projects</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo">Ichlasul Fikri</a>
+        <div class="nav-links">
+          <a href="./index.html" class="link">Home</a>
+          <a href="./projects.html" class="link-active">My Project</a>
+        </div>
+      </div>
+      <a href="./contact.html" class="contact-me-btn">Contact Me</a>
+    </nav>
+
+    <div class="container">
+      <h1>ADD MY PROJECT</h1>
+      <form onsubmit="addProject(event)">
+        <div class="form-group">
+          <label for="project-name">Project Name</label>
+          <input type="text" id="project-name" required />
+        </div>
+
+        <div class="date-inputs">
+          <div class="form-group">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" required />
+          </div>
+          <div class="form-group">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="project-description">Description</label>
+          <textarea id="project-description" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Technologies</label>
+          <div class="technologies">
+            <div class="checkbox-group">
+              <input type="checkbox" id="node-js" />
+              <label for="node-js">Node Js</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="next-js" />
+              <label for="next-js">Next Js</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="react-js" />
+              <label for="react-js">React Js</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="javacript" />
+              <label for="javascript">JavaScript</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="input-project-image">Upload Image</label>
+          <div class="upload-container">
+            <label for="input-project-image" class="upload-label">
+              <span class="choose-text">Choose</span>
+              <img
+                src="assets/file.png"
+                alt="attachment-image"
+                class="upload-icon"
+              />
+            </label>
+          </div>
+          <input
+            id="input-project-image"
+            name="input-project-image"
+            class="form-input"
+            type="file"
+            hidden
+          />
+        </div>
+
+        <button type="submit" class="form-submit-button">submit</button>
+      </form>
+    </div>
+    <section class="my-project">
+      <h1>MY PROJECT</h1>
+      <div id="projectsGrid" class="projects-grid">
+        <div class="project-card">
+          <img
+            src="assets/project-1.jpg"
+            alt="Dumbways Mobile App"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3 class="project-title">
+              <a href="project-detail.html">Dumbways Mobile App - 2021</a>
+            </h3>
+            <p class="project-duration">durasi: 3 bulan</p>
+            <p class="project-description">
+              App that used for dumbways student, it was deployed and can
+              downloaded on playstore. Happy download
+            </p>
+            <div class="project-icons">
+              <span class="project-icon"
+                ><i class="fa-brands fa-node"></i
+              ></span>
+              <span class="project-icon"
+                ><i class="fa-brands fa-react"></i
+              ></span>
+              <span class="project-icon"><i class="fa-brands fa-js"></i></span>
+            </div>
+            <div class="project-buttons">
+              <button class="btn-project btn-edit">edit</button>
+              <button class="btn-project btn-delete">delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="project.js"></script>
+  </body>
+</html>
